@@ -1,0 +1,6 @@
+name: example-skill
+version: 0.1.0
+description: "A simple example AI skill"
+entrypoint: "src.main:example_skill"
+author: "AI Developer"
+runtime: python3.12

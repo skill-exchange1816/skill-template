@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Skill Manifest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "entrypoint": {
+      "type": "string",
+      "default": "src.main:run"
+    },
+    "author": {
+      "type": "string"
+    },
+    "runtime": {
+      "type": "string",
+      "enum": ["python3.12"],
+      "default": "python3.12"
+    }
+  },
+  "required": ["name", "version", "description", "entrypoint"]
+}
